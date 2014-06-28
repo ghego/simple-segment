@@ -25,19 +25,19 @@ max_error = 0.005
 
 #sliding window with regression
 figure()
-segments = segment.slidingwindowsegment(data, fit.regression, fit.sumsquared_error, max_error)
+segments = segment.slidingwindowsegment(data, fit.regression, fit.sumsquared_error_regr, max_error)
 draw_plot(data,"Sliding window with regression")
 draw_segments(segments)
 
 #bottom-up with regression
 figure()
-segments = segment.bottomupsegment(data, fit.regression, fit.sumsquared_error, max_error)
+segments = segment.bottomupsegment(data, fit.regression, fit.sumsquared_error_regr, max_error)
 draw_plot(data,"Bottom-up with regression")
 draw_segments(segments)
 
 #top-down with regression
 figure()
-segments = segment.topdownsegment(data, fit.regression, fit.sumsquared_error, max_error)
+segments = segment.topdownsegment(data, fit.regression, fit.sumsquared_error_regr, max_error)
 draw_plot(data,"Top-down with regression")
 draw_segments(segments)
 
@@ -45,19 +45,19 @@ draw_segments(segments)
 
 #sliding window with simple interpolation
 figure()
-segments = segment.slidingwindowsegment(data, fit.interpolate, fit.sumsquared_error, max_error)
+segments = segment.slidingwindowsegment(data, fit.interpolate, fit.sumsquared_error_int, max_error)
 draw_plot(data,"Sliding window with simple interpolation")
 draw_segments(segments)
 
 #bottom-up with  simple interpolation
 figure()
-segments = segment.bottomupsegment(data, fit.interpolate, fit.sumsquared_error, max_error)
+segments = segment.bottomupsegment(data, fit.interpolate, fit.sumsquared_error_int, max_error)
 draw_plot(data,"Bottom-up with simple interpolation")
 draw_segments(segments)
 
 #top-down with  simple interpolation
 figure()
-segments = segment.topdownsegment(data, fit.interpolate, fit.sumsquared_error, max_error)
+segments = segment.topdownsegment(data, fit.interpolate, fit.sumsquared_error_int, max_error)
 draw_plot(data,"Top-down with simple interpolation")
 draw_segments(segments)
 
